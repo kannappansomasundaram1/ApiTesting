@@ -15,7 +15,7 @@ Tests can be run from,
     * [Httpyac](https://httpyac.github.io/guide/installation_cli.html),
     * [Intellj HTTP Client CLI](https://blog.jetbrains.com/idea/2022/12/http-client-cli-run-requests-and-tests-on-ci/) 
 
-## Httpyac CLI
+### Running all HTTP tests with Httpyac CLI
 
 I ran these tests with Httpyac CLI.
 Steps to run the tests,
