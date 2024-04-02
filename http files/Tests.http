@@ -1,0 +1,46 @@
+// run the test using httpyac with the below command
+// httpyac Tests.http -all -o response -v
+###
+
+# @title Get Todos
+GET https://jsonplaceholder.typicode.com/todos HTTP/1.1
+Accept: application/json
+
+> {%
+
+//Assert status code
+  client.test('status code 200', () => {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+  
+  // Set todoId as global variable to use it in subsequent request
+  client.global.set("todoId", response.body[2].id);
+%}
+
+###
+
+# @title Get 3rd Todo
+GET https://jsonplaceholder.typicode.com/todos/{{todoId}}
+Content-Type: application/json
+
+> {%
+ //Assert status code
+  client.test('status code 200', () => {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+
+%}
+###
+
+# @title Not valid Todo
+GET https://jsonplaceholder.typicode.com/todoss/{{todoId}}
+Content-Type: application/json
+
+> {%
+ //Assert status code
+  client.test('status code 200', () => {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+
+%}
+###

@@ -1,0 +1,12 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+* text=auto
+
+*.sln text eol=crlf
+*.csproj text eol=crlf
+*.cs text eol=crlf
+
+*.sh text eol=lf
+config/*.env text eol=lf
+config-vnext/*.env text eol=lf
