@@ -1,6 +1,8 @@
 # ApiTesting
 
-Summary and examples on different API Testing tools that were explored. 
+A few API Testing tools were explored and findings were recorded here.
+
+## Table of content
 
 1. [Postman + Newman CLI](#postman-collection-with-newman-cli)
 2. [Http Files](#http-files)
@@ -18,6 +20,7 @@ Examples available [here](01_PostmanTests) <br>
 
 ### Export
 Export the Collection from Postman in v2.1
+Exported format is not easy to maintain.
 
 ### Running the tests
 Steps to run the tests,
