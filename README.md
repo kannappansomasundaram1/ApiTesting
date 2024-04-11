@@ -47,15 +47,15 @@ It supports,
     * [Httpyac](https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac)
 
 ### Command line Options
-    * [Intellj HTTP Client CLI](https://blog.jetbrains.com/idea/2022/12/http-client-cli-run-requests-and-tests-on-ci/),
-    * [Httpyac](https://httpyac.github.io/guide/installation_cli.html)
+* [Intellj HTTP Client CLI](https://blog.jetbrains.com/idea/2022/12/http-client-cli-run-requests-and-tests-on-ci/),
+* [Httpyac](https://httpyac.github.io/guide/installation_cli.html)
 
 
 ### Example using httpyac
 
 Examples available [here](02_httpFiles) <br>
 
-In this example test, there are three tests,<br>
+There are three tests,<br>
 1. Fetch all Todos from API<br>
     * Asserts on the response status code,
     * Sets the variable todoId to be used in the next tests
