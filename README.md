@@ -1,7 +1,5 @@
 # ApiTesting
-Explore different Tools to test APIs
 
-# Tools
 1. [Postman + Newman CLI](#postman-collection-with-newman-cli)
 2. [Http Files](#http-files)
     * [Running tests from IDE/CodeEditor](#running-tests-from-idecode-editor)
