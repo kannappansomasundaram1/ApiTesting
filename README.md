@@ -7,6 +7,9 @@ A few API Testing tools were explored and findings were recorded here.
 1. [Postman + Newman CLI](#postman-collection-with-newman-cli)
 2. [Http Files](#http-files)
     * [Running tests from IDE/CodeEditor](#running-tests-from-idecode-editor)
+    * [Example using httpyac](#example-using-httpyac)
+        * [Setting global variables](#setting-global-variable)
+        * [Assertions](#assertion)
     * [Running tests using CLI - httpyac](#running-the-tests-using-httpyac)
 3. [Playwright .net](#playwright-tests)
 4. [.net HttpClient](#net-httpclient)
@@ -59,12 +62,28 @@ It supports,
 Examples available [here](02_httpFiles) <br>
 
 There are three tests,<br>
+
 1. Fetch all Todos from API<br>
     * Asserts on the response status code,
     * Sets the variable todoId to be used in the next tests
 2. Fetch Todo Items based on Id saved from previous test
     * Asserts on the response status code
 3. Fetch Todo Items based with invalid url to get 404 to simulate failure
+
+#### Setting global variable
+```javascript
+> {%
+  // Set todoId as global variable to use it in subsequent request
+  client.global.set("todoId", response.body[2].id);
+%}
+```
+#### Assertion
+```javascript
+//Assert status code
+  client.test('status code 200', () => {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+```
         
 
 ### Running the tests using httpyac CLI
